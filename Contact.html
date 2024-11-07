@@ -1,40 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head><title>Home</title></head>
-    <link rel="icon" href="images/my_logo.png" type="image/x-icon">
-<style type="text/css">
-    body {margin: 0; width: 100%;position: relative;}
-    
-    div.navmenu { width: 100%; height: 105px; background-color: rgb(15, 1, 1); margin: 0; padding: 0; position: fixed; top: 0; left: 0; z-index: 1000; }
-    div.navmenu ul { list-style-type: none; padding: 0; margin: 0; text-align: center; clear: both; }
-    div.navmenu li { display: inline-block; margin: 0; padding: 2px; }
-    div.navmenu a { display: block; width: 180px; padding: 25px; border-radius: 10px; font-weight: bold; color: rgb(255, 255, 255); background-color: rgb(30, 223, 59); text-align: center; text-decoration: none; }
-    div.navmenu a:hover { background-color: rgb(240, 242, 255); }
-    div.navmenu img {height: 24px; /* Adjust the size of the icons */vertical-align: middle; /* Align the icons with the text */margin-right: 12px; /* Space between the icon and the text */width: 24px;}
+    <head><title>Contact</title>
+    <link rel="icon" href="_images/my_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="_index.css" type="text/css">
+    </head>
 
-    
-    div.contact-container { background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 500px; width: 100%; margin: 20px auto; }
-    div.contact-container h1 { text-align: center; margin-bottom: 20px; color: #2c3e50; }
-    div.contact-container p { margin: 10px 0; font-size: 16px; }
-    div.contact-container a { color: #3498db; text-decoration: none; }
-    div.contact-container a:hover { text-decoration: underline; }
-    </style>
-<body style="margin-top: 180px;"bgcolor="lightgrey">
+<body>
    
-   
-    <h1 style="color: rgb(30, 223, 59)"><u><center> <!-- Add a title--></center></u></h1>
     <div class="navmenu">
         
         <ul> <br>
-		    <li><a href="Index.html"><img src="images/Home_icon.png" width="3" alt="Home Icon" type="image/x-icon"></a<font size="4" color="white">Home</font></a></li>
-            <li><a href="Blog.html"><img src="images/blog_icon.png" width="3" alt="Blog Icon" type="image/x-icon"></a<font size="4" color="white">Blog</font></a></li>
-            <li><a href="About Us.html"><img src="images/about_us_icon.png" width="3" alt="About Us Icon" type="image/x-icon"><font size="4" color="white">Abot Us</font></a></li>
-            <li><a href="FAQs.html"><img src="images/faqs_icon.png" width="3" alt="FAQs Icon" type="image/x-icon"><font size="4" color="white">FAQs</font></a></li>
-            <li><a href="Contact.html"><img src="images/contact_icon.png" width="3" alt="Contact Icon" type="image/x-icon"><font size="4" color="white">Contact</font></a></li>                                                         
+		    <li><a href="index.html"><img src="_images/Home_icon.png" width="3" alt="Home Icon" type="image/x-icon"><font size="4" color="white">Home</font></a></li>
+            <li><a href="blog.html"><img src="_images/blog_icon.png" width="3" alt="Blog Icon" type="image/x-icon"><font size="4" color="white">Blog</font></a></li>
+            <li><a href="about-us.html"><img src="_images/about_us_icon.png" width="3" alt="About Us Icon" type="image/x-icon"><font size="4" color="white">Abot Us</font></a></li>
+            <li><a href="faqs.html"><img src="_images/faqs_icon.png" width="3" alt="FAQs Icon" type="image/x-icon"><font size="4" color="white">FAQs</font></a></li>
+            <li><a href="contact.html"><img src="_images/contact_icon.png" width="3" alt="Contact Icon" type="image/x-icon"><font size="4" color="white">Contact</font></a></li>
             
     </div>
     
-    <div class="contact-container">
+    <div class="contact-page-container">
         <h1>Contact Safe Harbour</h1>
         <p><strong>Address:</strong></p>
         <p>1234 Peace Street, Cape Town, South Africa</p>
@@ -56,15 +40,32 @@
         </p>
     </div>
     <br>
+    <br>
+    <br>
+    <br>
     
-
-    <footer>
-        <p style="margin-left: 20px; margin-right: 20px; color: #641464;">
-            <a href="https://www.facebook.com">Facebook</a> |
-            <a href="https://www.twitter.com">Twitter</a> |
-            <a href="https://www.instagram.com">Instagram</a>
+    
+    <footer id="footer">
+        <p>
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+                    <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
         </p>
-        <p style="margin-left: 20px; margin-right: 20px;">&copy; 2024 Safe Harbour. All rights reserved.</p>
+        <p>&copy; 2024 Safe Harbour. All rights reserved.</p>
+        <p id="timestamp">time here</p>
     </footer>
+    
+    <script>
+        const timestampElement = document.getElementById("timestamp");
+        timestampElement.textContent = getCurrentTimestampString();
+    
+        function getCurrentTimestampString() {
+            const date = new Date();
+            return date.toLocaleString();
+        }
+    </script>
+</body>
+
+<script src="_index.js"></script>
 
 </html>
