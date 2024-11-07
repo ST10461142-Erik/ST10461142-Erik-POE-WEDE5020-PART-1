@@ -108,6 +108,18 @@ div.video-container iframe {
     border: none;
     border-radius: 10px;
 }
+.video-and-form {
+    display: flex;
+    gap: 20px; /* Space between video and form */
+    align-items: center;
+    height: 80vh;
+    justify-content: center; /* Centers the items horizontally */
+}
+
+.video-container iframe, .form-container iframe {
+    max-width: 100%; /* Responsiveness */
+    height: auto;
+}
 
 /* Responsive FAQ and Contact Containers */
 .contact-container {
